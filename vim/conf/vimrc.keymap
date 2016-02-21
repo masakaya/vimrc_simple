@@ -1,0 +1,74 @@
+" ===================================================
+" File .vimrc.keymap
+" Author : Masashi Kayahara <sylphs.mb@gmail.com >
+" Description : 
+"   Vim defautl func keymaps. 
+"   << Plugin keymaps >> define .vimrc.plugin
+" ===================================================
+"changes to the directory of an active file. 
+nnoremap <space>c :cd %:p:h<cr> 
+" Mark
+nnoremap <Space>m  :<C-u>marks
+" registers
+nnoremap <Space>r  :<C-u>registers
+" help
+nnoremap <Space>h  :<C-u>help<Space>
+" Close
+nnoremap <Space>cl :close<CR>
+
+"----------------------------------------------------
+" Tab
+"----------------------------------------------------
+" TabMove Down
+nnoremap <C-J>    <C-W>j
+" TabMove UP
+nnoremap <C-K>    <C-W>k
+" TabMove Left
+nnoremap <C-L>    <C-W>l
+" TabMove Right
+nnoremap <C-H>    <C-W>h
+
+" Note. Tab Resize <C-W>_
+
+"----------------------------------------------------
+" Search
+"----------------------------------------------------
+"clearing highlighted search
+nnoremap <silent>gh :nohlsearch<CR>
+
+"----------------------------------------------------
+" Quickfix
+"----------------------------------------------------
+map <C-N> :cn<CR> 
+map <C-P> :cp<CR>
+
+"----------------------------------------------------
+" Format
+"----------------------------------------------------
+nmap <C-F><C-A> gggqG<CR>
+
+"----------------------------------------------------
+" Insert Mode Setting
+"----------------------------------------------------
+" exit
+inoremap <silent> jj <ESC>
+inoremap <silent> <C-j> j
+inoremap <silent> kk <ESC>
+inoremap <silent> <C-k> k
+inoremap <silent> <C-]> <ESC>
+" move
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+
+" delete
+inoremap <silent> <C-h> <C-g>u<C-h>
+inoremap <silent> <C-d> <Del>
+inoremap <silent> <C-d>e <Esc>lc^
+inoremap <silent> <C-d>0 <Esc>lc$
+
+" yank
+inoremap <silent> <C-y>e <Esc>ly0<Insert>
+inoremap <silent> <C-y>0 <Esc>ly$<Insert>
+
