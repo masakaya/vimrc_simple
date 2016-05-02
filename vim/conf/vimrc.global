@@ -141,3 +141,10 @@ set foldmethod=manual
 "----------------------------------------------------
 set clipboard=unnamedplus,autoselect
 
+" ---------------------------------------------------
+" Backup / Swp Settng
+" --------------------------------------------------
+set noswapfile
+set nobackup
+set viminfo=
+
