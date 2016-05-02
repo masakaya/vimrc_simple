@@ -147,4 +147,5 @@ set clipboard=unnamedplus,autoselect
 set noswapfile
 set nobackup
 set viminfo=
+set noundofile
 
